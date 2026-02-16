@@ -1,0 +1,70 @@
+/* Simple, clean styles for the To-Do app */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f4f6f8;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 500px;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 8px 30px rgba(15, 23, 42, 0.08);
+}
+
+h1 {
+  margin: 0 0 12px 0;
+  font-size: 1.4rem;
+  text-align: center;
+}
+
+.form-row { display:flex; gap:8px; }
+
+#task-input {
+  flex: 1;
+  padding: 10px 12px;
+  border: 1px solid #e6e9ef;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+#add-btn {
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+#add-btn:hover { opacity: 0.95; }
+
+.task-list { list-style: none; padding: 0; margin: 16px 0 0 0; }
+
+.task-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #f1f3f5;
+  margin-bottom: 8px;
+}
+
+.task-text { font-size: 1rem; color: #0f172a; cursor: pointer; }
+
+.task-text.completed { text-decoration: line-through; color: #6b7280; }
+
+.btns { display:flex; gap:8px; }
+
+.btn { background:transparent; border:none; cursor:pointer; padding:6px; border-radius:6px; }
+
+.btn.delete { color: #ef4444; }
+
+.footer { text-align:center; color:#6b7280; margin-top:12px; font-size:0.9rem; }
