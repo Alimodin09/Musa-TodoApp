@@ -1,20 +1,9 @@
-/*
-  Simple To-Do App (vanilla JavaScript)
 
-  Features:
-  - Add tasks (button or Enter)
-  - Toggle complete by clicking task text
-  - Delete task with ❌ button
-  - Persist tasks in localStorage
-
-  All code uses basic DOM methods so it's beginner-friendly.
-*/
 
 ;(function(){
-  // localStorage key for saving tasks
+
   const STORAGE_KEY = 'todo.tasks.v1';
 
-  // Grab important DOM elements
   const form = document.getElementById('task-form');
   const input = document.getElementById('task-input');
   const list = document.getElementById('task-list');
@@ -61,7 +50,6 @@
           toggleComplete(task.id);
         });
 
-        // task text - clicking it will toggle completion (beginner-friendly behavior)
         const span = document.createElement('span');
         span.className = 'task-text' + (task.completed ? ' completed' : '');
         span.textContent = task.text;
@@ -73,7 +61,6 @@
       const btns = document.createElement('div');
       btns.className = 'btns';
 
-      // delete button (❌)
       const del = document.createElement('button');
       del.className = 'btn delete';
       del.setAttribute('aria-label','Delete task');
